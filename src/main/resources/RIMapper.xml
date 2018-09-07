@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cxgc.database.mapper.RIMapper">
+
+    <resultMap id="RIAllInfo" type="RailInformation">
+        <result property="railId" column="rail_Id"/>
+        <result property="projectName" column="projectName"/>
+        <result property="orderNum" column="orderNum"/>
+        <result property="lat" column="lat"/>
+        <result property="lng" column="lng"/>
+    </resultMap>
+
+    <insert id="add" parameterType="RailInformation">
+        INSERT INTO t_rail(
+        rail_Id,projectName,orderNum,lat,lng
+        )
+        VALUES(
+        #{railId},#{projectName},#{orderNum},#{lat},#{lng}
+        )
+    </insert>
+
+    <select id="findByRailId" resultMap="RIAllInfo">
+        <![CDATA[
+                  SELECT * FROM t_rail WHERE rail_Id = #{0}
+          ]]>
+    </select>
+
+</mapper>

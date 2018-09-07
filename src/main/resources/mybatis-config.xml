@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+
+    <properties resource="jdbc.properties" />
+
+<!--    把这里注释掉没有日志了就-->
+   <!-- <settings>
+        <setting name="logImpl" value="LOG4J" />
+    </settings>-->
+
+    <typeAliases>
+      <!--  <typeAlias alias="ProjectDepartmentInformation"
+            type="com.cxgc.database.model.ProjectDepartmentInformation" />
+
+        <typeAlias alias="User" type="com.cxgc.database.model.User" />
+
+        <typeAlias alias="DeviceStaticInformation"
+            type="com.cxgc.database.model.DeviceStaticInformation" />
+
+        <typeAlias alias="StaticInformationMaterial"
+            type="com.cxgc.database.model.StaticInformationMaterial" />-->
+
+        <typeAlias alias="DeviceDynamicInformation"
+            type="com.cxgc.database.model.DeviceDynamicInformation" />
+
+
+        <typeAlias alias="StaticInformation" type="com.cxgc.database.model.StaticInformation" />
+
+        <typeAlias alias="InspectorInformation"
+            type="com.cxgc.database.model.InspectorInformation" />
+
+        <typeAlias type="com.cxgc.database.model.RailInformation"
+            alias="RailInformation"/>
+
+        <typeAlias type="com.cxgc.database.model.DeviceStaticInformation"
+            alias="DeviceStaticInformation"/>
+
+
+
+    </typeAliases>
+
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+
+                <property name="poolMaximumIdleConnections" value="0" />
+                <property name="poolMaximumActiveConnections" value="10000" />
+                <property name="poolPingQuery" value="SELECT 1 FROM DUAL" />
+                <property name="poolPingEnabled" value="true" />
+
+            </dataSource>
+        </environment>
+    </environments>
+
+
+
+    <mappers>
+        <mapper resource="SIMapper.xml" />
+        <mapper resource="IIMapper.xml" />
+        <mapper resource="DDIMapper.xml" />
+        <mapper resource="RIMapper.xml"/>
+        <mapper resource="DSIMapper.xml" />
+ <!--       <mapper resource="UserMapper.xml" />
+
+
+        <mapper resource="PDIMapper.xml" />
+
+        <mapper resource="SIMMapper.xml" />-->
+    </mappers>
+
+</configuration>
