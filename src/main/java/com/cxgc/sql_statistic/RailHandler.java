@@ -10,22 +10,22 @@ public class RailHandler {
     public static void main(String[] args){
 
         List point = new ArrayList<PositionLatLng>();
-          /*  point.add(new PositionLatLng(120.302053, 31.583121));//ŒﬁŒ˝
-            point.add(new PositionLatLng(118.78594, 32.054551));//ƒœæ©
-               point.add(new PositionLatLng(118.511281, 31.667314));//¬Ì∞∞…Ω
-               point.add(new PositionLatLng(118.359122, 31.321643));//Œﬂ∫˛
-               point.add(new PositionLatLng(117.798819, 30.917071));//Õ≠¡Í
-               point.add(new PositionLatLng(118.721671, 30.95491));//–˚≥«
-               point.add(new PositionLatLng(120.182853, 30.25518));//∫º÷›
-               point.add(new PositionLatLng(120.072989, 30.879507));//∫˛÷›
-               point.add(new PositionLatLng(120.611319, 31.331027));//À’÷›*/
+          /*  point.add(new PositionLatLng(120.302053, 31.583121));//Êó†Èî°
+            point.add(new PositionLatLng(118.78594, 32.054551));//Âçó‰∫¨
+               point.add(new PositionLatLng(118.511281, 31.667314));//È©¨ÈûçÂ±±
+               point.add(new PositionLatLng(118.359122, 31.321643));//ËäúÊπñ
+               point.add(new PositionLatLng(117.798819, 30.917071));//ÈìúÈôµ
+               point.add(new PositionLatLng(118.721671, 30.95491));//ÂÆ£Âüé
+               point.add(new PositionLatLng(120.182853, 30.25518));//Êù≠Â∑û
+               point.add(new PositionLatLng(120.072989, 30.879507));//ÊπñÂ∑û
+               point.add(new PositionLatLng(120.611319, 31.331027));//ËãèÂ∑û*/
         point.add(new PositionLatLng(134.651356,46.680174));
           point.add(new PositionLatLng(118.831043,45.213599));
           point.add(new PositionLatLng(95.276356,27.059879));
 
 
         for(int i = 0; i < point.size(); i++){
-            RailInformation railInformation = new RailInformation(3, "Ã´∫˛ÀÌµ¿œÓƒø",  6 - i,
+            RailInformation railInformation = new RailInformation(3, "Â§™ÊπñÈößÈÅìÈ°πÁõÆ",  6 - i,
                     ( (PositionLatLng)point.get(i) ).getLongitude(), ( (PositionLatLng)point.get(i) ).getLatitude()
             );
             try {
